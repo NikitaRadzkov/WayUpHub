@@ -1,0 +1,209 @@
+//====================================================================================================
+.header {
+   background-image: url(../img/project/background.jpg);
+   background-position: center center;
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: #464646;
+}
+.header__content {
+   margin: 0px 0px 0px 100px;
+   @media (max-width: $md3+px) {
+      margin: 0px 0px 0px 30px;
+   }
+   @media (max-width: $md4+px) {
+      margin: 0px 0px 0px 20px;
+   }
+}
+._container {
+}
+.header__upper {
+   display: flex;
+   justify-content: space-between;
+}
+.header__menu {
+}
+.menu {
+}
+.header__icon {
+}
+.icon-menu {
+}
+.header__body {
+   transform: translate(0px, 100%);
+   position: fixed;
+   transition: transform 0.3s ease 0s;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   overflow: auto;
+   background-color: rgba(32, 29, 29, 0.8);
+   &._active {
+      transform: translate(0px, 0px);
+   }
+}
+
+.header__list {
+   position: relative;
+   left: 50px;
+   li {
+      padding: 30px 0px 0px 0px;
+      &:first-child {
+         padding: 100px 0px 0px 0px;
+      }
+   }
+}
+.header__link {
+   font-family: Montserrat Alternates;
+   font-weight: 600;
+   font-size: 26px;
+   line-height: 21 / 26 * 100%;
+   color: #fff;
+   @media (min-width: $md2+px) {
+      &:hover {
+         color: #ff004c;
+         transition: color 0.3s ease 0s;
+      }
+   }
+}
+.header__logo {
+   margin: 31px 0px 0px 0px;
+}
+.header__phone {
+   background-color: #fff;
+}
+.header__number {
+   padding: 20px 100px 20px 90px;
+   font-size: 15px;
+   line-height: 21 / 15 * 100%;
+   color: #2b2311;
+   @media (max-width: 585px) {
+      font-size: 12px;
+      padding: 10px 20px 10px 20px;
+   }
+}
+.header__midle {
+}
+.header__title {
+   margin: 169px 0px 0px 0px;
+   font-weight: bold;
+   font-size: 60px;
+   line-height: 73 / 60 * 100%;
+   color: #fff;
+   p {
+      display: inline;
+      color: #ff004c;
+   }
+   @media (max-width: $md2+px) {
+      font-size: 50px;
+   }
+   @media (max-width: $md3+px) {
+      margin: 50px 0px 0px 0px;
+   }
+   @media (max-width: $md4+px) {
+      font-size: 40px;
+   }
+}
+.header__point {
+   margin: 48px 0px 0px 0px;
+   font-family: Roboto;
+   font-size: 17px;
+   line-height: 31 / 17 * 100%;
+   color: #ffffff;
+   img {
+      position: relative;
+      top: 7px;
+      padding: 0px 5.85px 0px 0px;
+   }
+}
+.header__point-first {
+   display: flex;
+}
+.header__point-second {
+   display: flex;
+}
+.header__slider {
+}
+.header__under {
+   margin: 200px 0px 30px 0px;
+   @media (max-width: $md3+px) {
+      margin: 50px 0px 15px 0px;
+   }
+}
+.header__social {
+}
+.social__list {
+   display: flex;
+   li {
+      padding: 0px 56px 0px 0px;
+      &:last-child {
+         padding: 0px 0px 0px 0px;
+      }
+      @media (max-width: $md3+px) {
+         padding: 0px 20px 0px 0px;
+      }
+   }
+   a {
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16 / 14 * 100%;
+      color: #ffffff;
+      @media (min-width: $md2+px) {
+         &:hover {
+            color: #ff006b;
+            transition: color 0.5s ease 0s;
+         }
+      }
+      @media (max-width: $md4+px) {
+         font-size: 12px;
+      }
+   }
+}
+.social__link {
+}
+//====================================================================================================
+
+//Burger
+.icon-menu {
+   display: block;
+   text-align: left;
+   position: relative;
+   top: 18px;
+   right: 10px;
+   width: 30px;
+   height: 18px;
+   cursor: pointer;
+   z-index: 5;
+   span {
+      transition: all 0.3s ease 0s;
+      top: calc(50% - 1px);
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      &:first-child {
+         top: 0px;
+      }
+      &:last-child {
+         top: auto;
+         bottom: 0px;
+      }
+   }
+   &._active {
+      span {
+         transform: scale(0);
+         &:first-child {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+         }
+         &:last-child {
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+         }
+      }
+   }
+}
